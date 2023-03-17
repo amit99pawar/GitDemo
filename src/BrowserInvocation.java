@@ -1,5 +1,8 @@
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class BrowserInvocation {
 
@@ -29,12 +32,24 @@ public class BrowserInvocation {
 //		System.setProperty("webdriver.edge.driver", "/Users/rahulshetty/Documents/msedgedriver");
 //		WebDriver driver2 = new EdgeDriver();
 
-		driver.get("https://rahulshettyacademy.com");
-		System.out.println(driver.getTitle());
+		driver.get("https://rahulshettyacademy.com/AutomationPractice/");
 		System.out.println(driver.getCurrentUrl());
-	//	driver.close();
-		//driver.quit();
+		System.out.println(driver.getTitle());
+		driver.findElement(By.cssSelector("input[value='radio1']")).click();
+		Select opt = new Select(driver.findElement(By.id("dropdown-class-example")));
+		opt.selectByIndex(2);
+		driver.findElement(By.id("checkBoxOption1")).click();
+		driver.findElement(By.id("checkBoxOption2")).click();
+		driver.findElement(By.id("name")).sendKeys("Amit Pawar");
+		driver.findElement(By.id("alertbtn")).click();
+		driver.switchTo().alert().accept();
 		
+		driver.switchTo().newWindow(WindowType.WINDOW);
+		
+		
+		
+		
+//	    driver.close();
+//		driver.quit();	
 	}
-
 }
