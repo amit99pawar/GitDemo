@@ -29,6 +29,7 @@ public class Screenshot {
 		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		FileUtils.copyFile(src, new File("E:\\Selenium\\abc.png"));
 			
+		System.out.println("This Line added for GIT Purpose");
 	}
 
 }
