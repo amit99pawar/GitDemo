@@ -30,6 +30,8 @@ public class Screenshot {
 		FileUtils.copyFile(src, new File("E:\\Selenium\\abc.png"));
 			
 		System.out.println("This Line added for GIT Purpose");
+		
+		System.out.println("This line is added in GitData Project");
 	}
 
 }
